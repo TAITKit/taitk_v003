@@ -1,0 +1,38 @@
+
+{	
+	"Abbr" : "Discourse", 	 
+   	"FullName" : "A Unified RvNN Framework for End-to-End Chinese Discourse Parsing",  
+   	"Author" : "Chuan-An Lin, Hen-Hsen Huang, Zi-Yuan Chen and Hsin-Hsi Chen", 
+   	"Unit" : "台灣大學資訊系",
+   	"ProgramGoal" : ["Chinese discourse parser", "中文語篇剖析器"],
+   	"Describtion" : {  "Abstract" : "中文語篇剖析有四項子任務，包含初級語篇單元分割、 
+				剖析樹建立、主次關係識別、語篇關係辨識等。 
+				本文展示一個點對點中文語篇剖析器，並提出一套統一架構， 
+				可以對輸入之中文篇章直接產生完整的中文語篇剖析結果。 
+				我們的剖析器以遞迴類神經網路為基礎，同時對四項子任務進行學習， 
+				在中文語篇樹庫(CDTB)資料集上，達到最先進的效能。 
+				我們釋出了這個剖析器的原始碼與預先訓練完成的模型， 
+				立即可用。據我們所知，這是第一個開放原始碼的中文剖析工具集， 
+				而且這套獨立的工具集不須依賴外部資源(如句法剖析器)，
+				便於下游應用的整合。",
+			"Links" : [ "http://nlg18.csie.ntu.edu.tw/discourse_parser", 
+			  "http://aclweb.org/anthology/C18-2016" ] },
+	"SourceCode" : ["https://github.com/abccaba2000/discourse-parser"],
+	"Category" : ["NLP", "Discourse", "遞迴類神經網路"],
+	"DataSet" : [
+			{"Name" : "WordNet",
+			 "Url" : "https://wordnet.princeton.edu/",
+			 "Fee" : "Free/Due"},
+			{"Name" : "中文語篇樹庫（CDTB）",
+			 "Url" : "www.cs.brandeis.edu/~clp/cdtb/",
+			 "Fee" : "Free"}],
+	"EnvPackage" : [ "Windows/Linux", 
+   					 "Python", "Tensorflow", "Standford Chinese Parser"],
+	"CanExecute" : "Yes",
+	"InputType" : "Type-A ",	 		
+   	"OutputType" : "Type-B ",
+   	"NeedParameter" : "Yes",
+   	"Parameter" : [
+   			{"function":"畫出HTML圖檔","name":"-demo","range":"No","format":"-demo"},
+   			{"function":"調整樹的深度","name":"-r","range":"0 ~ 100","format":"-r:50"}]
+   	}
